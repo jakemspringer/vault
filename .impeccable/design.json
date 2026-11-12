@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T20:00:00-05:00",
+  "title": "Design System: Vault",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Report green",
+        "canonical": "#246354",
+        "tonalRamp": [
+          "#0e241d",
+          "#143b2d",
+          "#1b503e",
+          "#246354",
+          "#4d8370",
+          "#80aa96",
+          "#b5cfbf",
+          "#edf5ef"
+        ]
+      },
+      "spending": {
+        "role": "secondary",
+        "displayName": "Spending sage",
+        "canonical": "#A8C2B5",
+        "tonalRamp": [
+          "#17231d",
+          "#2f4539",
+          "#4c6557",
+          "#6c8777",
+          "#8da999",
+          "#a8c2b5",
+          "#cbdcd2",
+          "#f0f6f2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "figures": {
+        "displayName": "Accounting figures",
+        "purpose": "Aligned totals with tabular numerals."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-state",
+        "value": "160ms ease-out",
+        "purpose": "Button background and border state feedback; disabled under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "medium",
+        "value": "900px"
+      },
+      {
+        "name": "small",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Sign-in action.",
+      "html": "<button class=\"ds-primary\">Sign in</button>",
+      "css": ".ds-primary{background:var(--accent,#246354);color:white;border:1px solid #246354;border-radius:5px;min-height:44px;padding:8px 18px;font:500 16px Arial;transition:background-color 160ms ease-out}.ds-primary:hover{background:#194c3f}.ds-primary:focus-visible{outline:2px solid #246354;outline-offset:3px}.ds-primary:active{background:#103b2e}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Sign-out and retry actions.",
+      "html": "<button class=\"ds-secondary\">Sign out</button>",
+      "css": ".ds-secondary{background:#fff;color:#172f27;border:1px solid #aebfb3;border-radius:5px;min-height:44px;padding:8px 18px;font:500 16px Arial}.ds-secondary:hover{background:#f3f7f4;border-color:#246354}.ds-secondary:focus-visible{outline:2px solid #246354;outline-offset:3px}"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "description": "Labeled credential input.",
+      "html": "<label class=\"ds-label\">Username<input class=\"ds-input\" autocomplete=\"username\"></label>",
+      "css": ".ds-label{display:grid;gap:8px;color:#172f27;font:14px Arial}.ds-input{min-height:44px;border:1px solid #aebfb3;border-radius:5px;background:#fff;color:#172f27;padding:0 10px}.ds-input:focus-visible{outline:2px solid #246354;outline-offset:2px}"
+    },
+    {
+      "name": "Workspace masthead",
+      "kind": "nav",
+      "description": "Product identity and sample-data context.",
+      "html": "<header class=\"ds-mast\"><strong>Vault.</strong><span>Sample workspace</span></header>",
+      "css": ".ds-mast{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c9d6cd;padding:16px 0;font:14px Arial;color:#53675d}.ds-mast strong{font-size:30px;color:#172f27;letter-spacing:-.035em}"
+    },
+    {
+      "name": "Category row",
+      "kind": "custom",
+      "description": "An exact category amount and proportional data bar.",
+      "html": "<div class=\"ds-category\"><div><span>Rent</span><strong>$17,400</strong></div><div class=\"ds-track\"><span></span></div></div>",
+      "css": ".ds-category{padding:13px 0;border-bottom:1px solid #e7ede9;color:#172f27;font:14px Arial}.ds-category>div:first-child{display:flex;justify-content:space-between;gap:12px}.ds-category strong{font-weight:500;font-variant-numeric:tabular-nums}.ds-track{height:4px;background:#eff3f0;margin-top:10px}.ds-track span{display:block;width:100%;height:4px;background:#246354}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The financial report",
+    "overview": "A white financial workspace with clear figures, restrained green data ink, and flat surfaces. The user selected this direction through the visual design page, replacing the original dark glass-card layout.",
+    "keyCharacteristics": [
+      "White surfaces with deep green text and fine separating rules.",
+      "Unboxed summary figures with shared alignment.",
+      "Familiar controls and functional data graphics."
+    ],
+    "rules": [
+      {
+        "section": "Colors",
+        "name": "The Data Ink Rule",
+        "body": "Use color to distinguish data or state. Financial labels remain explicit."
+      },
+      {
+        "section": "Typography",
+        "name": "The Number Alignment Rule",
+        "body": "Right-align amounts in category lists and use tabular figures."
+      }
+    ],
+    "dos": [
+      "Do keep backgrounds white, labels explicit, and financial figures aligned.",
+      "Do show the actual reporting period.",
+      "Do preserve native keyboard and form behavior.",
+      "Do inspect charts at desktop and mobile widths."
+    ],
+    "donts": [
+      "Don't reintroduce dark glass panels or equal rounded cards as the page structure.",
+      "Don't use effects or invented financial claims as decoration.",
+      "Don't imply sample records are a visitor's real finances."
+    ]
+  }
+}

@@ -6,8 +6,8 @@ All data is randomly generated sample data.
 ![Dashboard](docs/dashboard.png)
 
 ## Live demo
-- **Dashboard:** _link coming soon_
-- **API docs (Swagger):** _link coming soon_
+- **Dashboard:** https://jakemspringer-vault.streamlit.app/
+- **API docs (Swagger):** https://vault-api-gz3v.onrender.com/docs
 - **Demo login:** `demo` / `demo123`
 
 The API runs on a free tier and sleeps when idle, so the first request can take up to a minute.
@@ -57,7 +57,7 @@ Amounts are positive for income and negative for expenses.
 Requires Python 3.11+.
 
 ```bash
-git clone https://github.com/jmspringr/vault.git
+git clone https://github.com/jakemspringer/vault.git
 cd vault
 python3 -m venv .venv
 source .venv/bin/activate
