@@ -3,6 +3,9 @@ from datetime import datetime
 from html import escape
 from pathlib import Path
 
+# Plotly's optional-import checks can observe a partially loaded NumPy module
+# when Streamlit sessions start concurrently. Complete its import first.
+import numpy  # noqa: F401 -- intentional eager import
 import plotly.graph_objects as go
 import requests
 import streamlit as st

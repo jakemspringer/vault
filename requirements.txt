@@ -8,4 +8,5 @@ python-dotenv
 faker
 streamlit>=1.66
 plotly
+numpy>=1.25,<3
 requests
